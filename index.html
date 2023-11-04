@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F3-MT3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home">
+    <div class="container">
+        <div class="left">
+            <h1 id="title">Post Office Application.</h1>
+            <p>This Application Allows you to extract information about the nearest Post Offices, based on your
+                location.</p>
+            <img id="indeximage" src="src/undraw_messenger_re_8bky 1.png" alt="">
+        </div>
+        <div class="right">
+            <p id="iptext">Your Current IP Address is <span id="ip"></span></p>
+            <button id="searchbtn" onclick="showDetails();" type="button">Get Started</button>
+        </div>
+    </div>
+
+    <!-- landing Page -->
+    <div class="container2">
+        <div class="resultpage">
+            <p id="text">IP Address : <span id="landingIP"></span></p>
+        </div>
+        <div class="IpData">
+            <div>
+                <p>Lat: <span id="lat"></span></p>
+                <p>Long: <span id="long"></span></p>
+            </div>
+            <div>
+                <p>City: <span id="city"></span></p>
+                <p>Region: <span id="region"></span></p>
+
+            </div>
+            <div>
+                <p>Organisation: <span id="org"></span></p>
+                <p>Hostname: <span id="host"></span></p>
+            </div>
+        </div>
+        <div class="map">
+            <h1 id="headings">Your Current Location</h1>
+            <div class="googleMap">
+                <iframe frameborder="0" width="100%" height="100%" id="googlemap"></iframe>
+            </div>
+        </div>
+        <h1 id="headings">More Information About You</h1>
+        <div class="MoreInfo">
+            <p>Time Zone: <span id="time"></span></p>
+            <p>Date And Time: <span id="date"></span></p>
+            <p>Pincode: <span id="pin"></span></p>
+            <p>Message: <span id="noOfPost"></span></p>
+        </div>
+        <h1 id="headings">Post Offices Near You</h1>
+        <div class="searchBox">
+            <i class="fa-regular fa-magnifying-glass"></i>
+            <input type="text" name="" onkeyup="searchPost();" id="searchBox" placeholder="&#xF002; Search By Name">
+        </div>
+        <div class="grid-container" id="card">
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/591c524be6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
